@@ -1,1 +1,2 @@
-# build-lambda-functions-with-java
+# tech-book-fest-11
+技術書展11で出展する本に載せるサンプルコード
