@@ -3,19 +3,19 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 /**
- * ó‚¯æ‚Á‚½–¼‘Oî•ñ‚ğ—˜—p‚µ‚Äˆ¥A•¶‚ğ•Ô‚·LambdaŠÖ”
+ * å—ã‘å–ã£ãŸåå‰æƒ…å ±ã‚’åˆ©ç”¨ã—ã¦æŒ¨æ‹¶æ–‡ã‚’è¿”ã™Lambdaé–¢æ•°
  * 
- * @param <UserName> LambdaŠÖ”‚ÌÀs‚ÉƒCƒ“ƒvƒbƒgiƒŠƒNƒGƒXƒgj‚Æ‚µ‚Äó‚¯æ‚é–¼‘O
-@* @param <String>  ƒAƒEƒgƒvƒbƒgiƒŒƒXƒ|ƒ“ƒXj‚Æ‚µ‚Ä•Ô“š‚·‚éˆ¥A•¶
+ * @param <UserName> Lambdaé–¢æ•°ã®å®Ÿè¡Œæ™‚ã«ã‚¤ãƒ³ãƒ—ãƒƒãƒˆï¼ˆãƒªã‚¯ã‚¨ã‚¹ãƒˆï¼‰ã¨ã—ã¦å—ã‘å–ã‚‹åå‰
+ * @param <String>  ã‚¢ã‚¦ãƒˆãƒ—ãƒƒãƒˆï¼ˆãƒ¬ã‚¹ãƒãƒ³ã‚¹ï¼‰ã¨ã—ã¦è¿”ç­”ã™ã‚‹æŒ¨æ‹¶æ–‡
  */
 public class HelloLambda implements RequestHandler<UserName, String> {
 
 	/**
-	 * handleRequestƒƒ\ƒbƒh
-	 * LambdaŠÖ”‚ÌÀsƒŠƒNƒGƒXƒg‚ğæ‚èˆµ‚¤
-	 * @param username –¼‘O
-	 * @param context AWS Lambda Context ƒIƒuƒWƒFƒNƒg
-	 * @return ˆ¥A•¶
+	 * handleRequestãƒ¡ã‚½ãƒƒãƒ‰
+	 * Lambdaé–¢æ•°ã®å®Ÿè¡Œãƒªã‚¯ã‚¨ã‚¹ãƒˆã‚’å–ã‚Šæ‰±ã†
+	 * @param username åå‰
+	 * @param context AWS Lambda Context ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+	 * @return æŒ¨æ‹¶æ–‡
 	 */
 	@Override
 	public String handleRequest(UserName username, Context context) {
@@ -27,13 +27,13 @@ public class HelloLambda implements RequestHandler<UserName, String> {
 }
 
 /**
- * –¼‘O‚Ìî•ñ‚ğŠi”[‚·‚éƒNƒ‰ƒX
+ * åå‰ã®æƒ…å ±ã‚’æ ¼ç´ã™ã‚‹ã‚¯ãƒ©ã‚¹
  */
 class UserName {
 
-	//–¼
+	//å
 	public String firstName;
 	
-	//©
+	//å§“
 	public String lastName;
 }
