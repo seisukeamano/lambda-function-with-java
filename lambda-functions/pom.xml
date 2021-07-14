@@ -13,9 +13,10 @@
 	<modules>
 		<module>hello-lambda</module>
 		<module>poi-sample</module>
+		<module>put-text</module>
 	</modules>
 	
-		<!-- 文字コードとJavaのバージョンの設定 -->
+	<!-- 文字コードとJavaのバージョンの設定 -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
@@ -55,6 +56,4 @@
 		</plugins>
 	</build>
 	
-
-
 </project>
