@@ -11,7 +11,8 @@
 
     <!-- モジュールとして作成したLambda関数 -->
 	<modules>
-		<module>hallo-lambda</module>
+		<module>hello-lambda</module>
+		<module>poi-sample</module>
 	</modules>
 	
 		<!-- 文字コードとJavaのバージョンの設定 -->
