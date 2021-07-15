@@ -11,8 +11,21 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 
-public class PutText implements RequestHandler<Object, Object> {
+/**
+ * テキストファイルを出力してS3バケットへ格納するLambda関数
+ * 
+ * @param <Object> インプット（リクエスト）では情報は受け取らないためObjectを指定
+ * @param <String> アウトプット（レスポンス）は関数実行後の結果をメッセージ
+ */
+public class PutText implements RequestHandler<Object, String> {
 
+	/**
+	 * handleRequestメソッド
+	 * Lambda関数の実行リクエストを取り扱う
+	 * @param obj インプットは利用しないためobjを指定
+	 * @param context AWS Lambda Context オブジェクト
+	 * @return 挨拶文
+	 */
 	@Override
 	public String handleRequest(Object obj, Context context) {
 
