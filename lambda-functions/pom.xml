@@ -14,12 +14,15 @@
 		<module>hello-lambda</module>
 		<module>poi-sample</module>
 		<module>put-text</module>
+		<module>employee-info-output</module>
 	</modules>
 	
 	<!-- 文字コードとJavaのバージョンの設定 -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+	    <maven.compiler.source>1.8</maven.compiler.source>
+	    <maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<!-- AWS Lambda Java Core ライブラリの設定 -->
