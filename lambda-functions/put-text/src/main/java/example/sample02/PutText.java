@@ -30,8 +30,8 @@ public class PutText implements RequestHandler<Object, String> {
 	public String handleRequest(Object obj, Context context) {
 
 		try {
-			
-			// テキストファイルの作成（Lambdaの実行環境に作成するので\tmp\）
+		
+			// テキストファイルをLambda関数の実行環境（/tmp/）に作成）
 			File file = new File("/tmp/sample.txt");
 			
 			// テキストファイルへの書き込み
