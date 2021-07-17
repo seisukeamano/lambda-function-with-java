@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-
+import java.util.Map;
 import java.text.SimpleDateFormat;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -31,7 +31,13 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
  * @param <Object> インプット（リクエスト）では情報は受け取らないためObjectを指定
  * @param <String> アウトプット（レスポンス）は関数実行後の結果をメッセージ
  */
-public class EmployeeInfoOutput implements RequestHandler<ArrayList<EmployeeInfo>, String> {
+public class EmployeeInfoOutput implements RequestHandler< Map<String, ArrayList<EmployeeInfo>>, String> {
+
+
+/**
+ * MapのArrayListで取るパターン
+ * public class EmployeeInfoOutput implements RequestHandler< Map<String, ArrayList<Map<String, String>>>, String> {
+ */
 
 	
 	/**
@@ -42,20 +48,34 @@ public class EmployeeInfoOutput implements RequestHandler<ArrayList<EmployeeInfo
 	 * @return 出力結果
 	 */
 	@Override
-	public String handleRequest(ArrayList<EmployeeInfo> empInfoList, Context context) {
+	public String handleRequest(Map<String, ArrayList<EmployeeInfo>> event, Context context) {
+
+		ArrayList<EmployeeInfo> empInfo = event.get("data");
+		String name1 = empInfo.get(0).name;
+		System.out.println("name1: "+ name1);
+				
+		
+/**	
+ * MapのArrayListで取るパターン
+
+	public String handleRequest(Map<String, ArrayList<Map<String,String>>> event, Context context) {
 
 		// TODO : JSON配列を取得できてない・・
 		
-		// 「example.sample04.EmployeeInfo@ハッシュ」が出力される
-		//	System.out.println(empInfoList);
+		ArrayList<Map<String, String>> empInfo = event.get("data");
 		
-		// 「example.sample04.EmployeeInfo@ハッシュ」が出力される
-		//	System.out.println(empInfoList.get(0));
+		String name1 = empInfo.get(0).get(0) ;		
+		System.out.println("name1: "+ name1);
+
+*/
 		
 		try {
 			// 新規ワークブックを作成
 			XSSFWorkbook workbook = Const.createWorkbook();
-			
+
+/**
+ArrayList<EmoloyeeInfo>で取ろうとしたけどこれだと取れないので一時コメントアウト
+
 			// ワークブックに社員情報を記入してファイルを作成
 			File file = Const.writeEmpInfo(workbook, empInfoList);
 
@@ -63,6 +83,10 @@ public class EmployeeInfoOutput implements RequestHandler<ArrayList<EmployeeInfo
 			Const.upload(file);
 
 			String message = "Excelファイルを作成しました。"+" List size:"+empInfoList.size();
+*/
+
+			String message = "Excelファイルを作成しました。";
+			
 			return message;
 
 		} catch (Exception e) {
