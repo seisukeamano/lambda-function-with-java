@@ -17,6 +17,8 @@
 		<module>employee-info-output</module>
 		<module>employee-info-output-api</module>
 		<module>ApiSample</module>
+		<module>pass-parameter-api</module>
+		<module>file-output-api</module>
 	</modules>
 	
 	<!-- 文字コードとJavaのバージョンの設定 -->
