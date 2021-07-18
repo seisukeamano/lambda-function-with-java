@@ -17,3 +17,19 @@
 ### Sample04
 - EmployeeInfoOutput.java
 - 社員情報をExcleに書き込んでS3に書き出し
+
+### Sample05
+- ApiSample.java
+- API Gatewayから実行するとHTMLをレスポンスとして表示
+
+### Sample06
+- FileOutputApi.java
+- API Gatewayから実行するとファイルをレスポンスとしてダウンロード
+
+### Sample07
+- PassPrameterAPi.java
+- API Gatewayからパラメーターを指定して実行する場合
+
+
+
+
