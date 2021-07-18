@@ -9,7 +9,7 @@
 		<artifactId>lambda-functions</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>file-output-api</artifactId>
+	<artifactId>pass-parameter-api</artifactId>
 
 	<!-- ライブラリの設定 -->
 	<dependencies>
@@ -24,22 +24,6 @@
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-lambda-java-events</artifactId>
 			<version>2.2.9</version>
-		</dependency>
-		<!-- POI -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>4.1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>4.1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml-schemas</artifactId>
-			<version>4.1.2</version>
 		</dependency>
 	</dependencies>
 

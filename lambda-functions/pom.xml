@@ -19,6 +19,8 @@
 		<module>ApiSample</module>
 		<module>pass-parameter-api</module>
 		<module>file-output-api</module>
+		<module>pass-multi-value-parameter-apit</module>
+		<module>pass-parameter-api-post</module>
 	</modules>
 	
 	<!-- 文字コードとJavaのバージョンの設定 -->
