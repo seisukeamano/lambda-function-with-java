@@ -24,12 +24,14 @@
 
 ### Sample06
 - FileOutputApi.java
-- API Gatewayから実行するとファイルをレスポンスとしてダウンロード
+- API Gatewayから実行するとファイルをレスポンスとして返却（ダウンロード）
 
 ### Sample07
 - PassPrameterAPi.java
 - API Gatewayからパラメーターを指定して実行する場合
 
-
+### Sample08
+- EmployeeInfoOutputApi.java
+- API Gatewayからパラメーターを指定して実行するとその内容をExcelに出力してS3にアップロード＆レスポンスで返却
 
 
