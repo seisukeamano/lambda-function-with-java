@@ -1,6 +1,4 @@
-# tech-book-fest-11
-技術書展11で出展する本に載せるサンプルコード
-
+# lambda-function-with-java
 
 ### Sample01
 - HelloLambda.java
